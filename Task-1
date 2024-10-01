@@ -1,0 +1,23 @@
+def celsius_to_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+def celsius_to_kelvin(celsius):
+    return celsius + 273.15
+
+def main():
+    try:
+        # Input temperature in Celsius
+        celsius = float(input("Enter the temperature in Celsius: "))
+
+        # Convert to Fahrenheit and Kelvin
+        fahrenheit = celsius_to_fahrenheit(celsius)
+        kelvin = celsius_to_kelvin(celsius)
+
+        # Print the converted values
+        print(f"{celsius:.2f} °C is equivalent to {fahrenheit:.2f} °F and {kelvin:.2f} K.")
+    
+    except ValueError:
+        print("Please enter a valid number.")
+
+if __name__ == "__main__":
+    main()
